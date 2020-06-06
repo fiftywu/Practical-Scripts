@@ -1,4 +1,4 @@
-# Matlab-Practical-Scripts
+# Practical-Scripts
 
 ## Mathematical Modeling Common-used Algorithms
 
