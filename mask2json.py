@@ -8,7 +8,7 @@ from skimage.measure import label, regionprops
 def get_points_list(mask):
     # output format: [['1,2','2,3'], ['4,5','4,3']]
     # cal
-    label_mask = label(mask, connectivity = mask.ndim)
+    label_mask = label(mask, connectivity = mask.ndim, background = 0)
     # props = regionprops(label_img)
     points_list = []
     for label_ in np.unique(label_mask):
@@ -49,3 +49,5 @@ if __name__ == '__main__':
     mask_path = os.path.join(data_path, mask_name)
     json_str = get_json_file(mask_path)
     print(json_str)
+    
+ # ref: https://blog.csdn.net/pursuit_zhangyu/article/details/94209489
